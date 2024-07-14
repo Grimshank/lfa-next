@@ -1,5 +1,6 @@
 import {Button} from "@/components/ui/button";
 import { getWorks } from '../lib/contentful';
+import Image from "next/image";
 
 export default async function Home() {
   const works = await getWorks();
@@ -10,6 +11,7 @@ export default async function Home() {
         works.map(work => (
           <div key={work.id}>
               {work.title}
+              <Image src={work.image} />
           </div>
         ))
       }
