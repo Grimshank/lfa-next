@@ -8,12 +8,15 @@ export default async function Home() {
   return (
     <main className="container mx-auto py-6">
       {
-        works.map(work => (
-          <div key={work.id}>
+        works.map(work => {
+          console.log(`WORK: ${work.image}`);
+          return (
+            <div key={work.id}>
               {work.title}
-              <Image src={work.image} />
-          </div>
-        ))
+              <Image src={work.image}/>
+            </div>
+          )
+        })
       }
       <Button>Our Cool Button</Button>
     </main>
