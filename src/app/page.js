@@ -6,6 +6,13 @@ export default async function Home() {
 
   return (
     <main className="container mx-auto py-6">
+      {
+        works.map(work => (
+          <div key={work.id}>
+              {work.title}
+          </div>
+        ))
+      }
       <Button>Our Cool Button</Button>
     </main>
   );
