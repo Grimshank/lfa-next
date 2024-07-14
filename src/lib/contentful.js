@@ -14,9 +14,10 @@ const getEntriesByType = async (type) => {
   const response = await client.getEntries({
     content_type: type,
   });
+  return response.items;
 }
 
 export const getWorks = async () => {
-  const results = await getEntriesByType('Work');
+  const results = await getEntriesByType('work');
   console.log(JSON.stringify(results, null, 2));
 }
