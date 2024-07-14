@@ -9,7 +9,7 @@ export default async function Home() {
     <main className="container mx-auto py-6">
       {
         works.map(work => {
-          console.log(`WORK: ${work.image}`);
+          console.log(`WORK: ${JSON.stringify(work.image)}`);
           return (
             <div key={work.id}>
               {work.title}
