@@ -19,5 +19,6 @@ const getEntriesByType = async (type) => {
 
 export const getWorks = async () => {
   const results = await getEntriesByType('work');
-  console.log(JSON.stringify(results, null, 2));
+  const works = results.map((work) => work.fields);
+  return works;
 }
