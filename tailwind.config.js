@@ -69,7 +69,7 @@ module.exports = {
         title: {
           "0%": {
             "line-height": "0%",
-            "letter-spacing": "0.25em",
+            "letter-spacing": "1.25em",
             opacity: 0,
           },
           "25%": {
@@ -84,11 +84,23 @@ module.exports = {
             opacity: "100%",
           },
         },
+        "fade-in-3": {
+          "0%": {
+            opacity: "0%",
+          },
+          "75%": {
+            opacity: "0%",
+          },
+          "100%": {
+            opacity: "100%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        title: "title 3s ease-out forwards"
+        title: "title 3s ease-out forwards",
+        "fade-in-3": "fade-in-3 3s ease-out forwards",
       },
     },
   },
