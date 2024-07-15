@@ -13,7 +13,7 @@ export default async function Home() {
           return (
             <div key={work.id}>
               {work.title}
-              <Image src={work.image.fields.file.url} alt={work.title} />
+              <Image src={`https:${work.image.fields.file.url}`} alt={work.title} />
             </div>
           )
         })
