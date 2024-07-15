@@ -6,7 +6,7 @@ export default async function Home() {
   const works = await getWorks();
 
   return (
-    <main className="bg-[#000000] flex flex-col items-center justify-center p-10 min-h-screen">
+    <main className="bg-[#ffffff] flex flex-col items-center justify-center p-10 min-h-screen">
       {
         works.map(work => {
           console.log(`WORK: ${JSON.stringify(work.image)}`);
