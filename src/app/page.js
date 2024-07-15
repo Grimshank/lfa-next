@@ -6,7 +6,7 @@ export default async function Home() {
   const works = await getWorks();
 
   return (
-    <main className="container mx-auto py-6">
+    <main className="bg-[#03040B] flex flex-col items-center justify-center p-10 min-h-screen">
       {
         works.map(work => {
           console.log(`WORK: ${JSON.stringify(work.image)}`);
@@ -19,6 +19,11 @@ export default async function Home() {
         })
       }
       <Button>Our Cool Button</Button>
+
+      <div>
+        <h2>Join the waitlist for my</h2>
+        <h1>Newsletter</h1>
+      </div>
     </main>
   );
 }
