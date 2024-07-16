@@ -9,7 +9,6 @@ export default async function Home() {
   return (
     <main className="bg-white flex flex-col items-center justify-center p-10 min-h-screen">
       {
-        /*
         works.map(work => {
           console.log(`WORK: ${JSON.stringify(work.image)}`);
           return (
@@ -19,7 +18,6 @@ export default async function Home() {
             </div>
           )
         })
-        */
       }
 
       <div className="space-y-1">
