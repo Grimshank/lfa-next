@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "contentful": "^10.12.8",
+    "gsap": "^3.12.5",
     "lucide-react": "^0.408.0",
     "next": "14.2.5",
     "react": "^18",
