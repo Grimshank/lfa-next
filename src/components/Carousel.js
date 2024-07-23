@@ -47,7 +47,10 @@ function Carousel({works}) {
     <div className="py-8">
       <motion.div
         className="absolute left-0 flex gap-4"
-        style={{ x: xTranslation }}
+        style={{
+          x: xTranslation,
+          overflow: 'hidden',
+        }}
         ref={ref}
         onHoverStart={() => {
           setMustFinish(true);

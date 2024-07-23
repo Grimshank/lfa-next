@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const UNDERLAY_VARIANTS = {
   open: {
     width: "calc(100% - 32px)",
-    height: "calc(100vh - 32px)",
+    height: "calc(100dvh - 32px)",
     transition: { type: "spring", mass: 3, stiffness: 400, damping: 50 },
   },
   closed: {
