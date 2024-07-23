@@ -17,7 +17,11 @@ function ExpandableDiv() {
         <motion.h2 layout="position">Click Me</motion.h2>
         {
           isOpen && (
-            <motion.div>
+            <motion.div
+              initial={{opacity: 0}}
+              animate={{opacity: 1}}
+              transition={{ duration: 2.5, type: 'spring' }}
+            >
               <p style={{ width: '20rem' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis libero justo.
                 Phasellus sit amet mattis elit. Fusce et mi eget est consectetur malesuada. Morbi

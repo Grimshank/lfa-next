@@ -13,10 +13,10 @@ function AnimatedHamburgerButton({ image }) {
         ease: 'linear',
       }}
     >
-      <motion.button
+      <motion.div
         initial={false}
         onClick={() => setActive((pv) => !pv)}
-        className="relative h-20 w-20 rounded-full bg-black/0 transition-colors hover:bg-black/20"
+        className="fixed top-4 right-4 h-20 w-20 rounded-xl bg-[#ED9238]/50 transition-colors hover:bg-[#ED9238]/100 drop-shadow-xl"
         animate={active ? "open" : "closed"}
       >
         <motion.span
@@ -76,7 +76,7 @@ function AnimatedHamburgerButton({ image }) {
             },
           }}
         />
-      </motion.button>
+      </motion.div>
     </MotionConfig>
   )
 }

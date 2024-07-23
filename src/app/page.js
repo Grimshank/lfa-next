@@ -4,8 +4,9 @@ import { getWorks } from '../lib/contentful';
 import NewsletterForm from '@/components/NewsletterForm';
 import Socials from '@/components/Socials';
 import Carousel from '@/components/Carousel';
-import AnimatedHamburgerButton from '@/components/AnimatedHamburgerButton';
 import ExpandableDiv from '@/components/ExpandableDiv';
+import Basic from '@/components/Basic';
+import Nav from "@/components/nav/Nav";
 
 export default async function Home() {
   const works = await getWorks();
@@ -13,8 +14,9 @@ export default async function Home() {
   return (
     <main className="bg-white flex flex-col items-center justify-center p-10 min-h-screen">
 
-      <AnimatedHamburgerButton />
+      <Nav />
       <ExpandableDiv />
+      <Basic />
 
       <Carousel works={works} />
 
