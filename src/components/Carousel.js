@@ -44,12 +44,11 @@ function Carousel({works}) {
   }, [rerender, xTranslation, duration, width]);
 
   return (
-    <div className="py-8">
+    <div className="py-8" style={{ position: 'fixed', width: '100vw', height: '300px', overflow: 'hidden' }}>
       <motion.div
         className="absolute left-0 flex gap-4"
         style={{
           x: xTranslation,
-          overflow: 'hidden',
         }}
         ref={ref}
         onHoverStart={() => {
