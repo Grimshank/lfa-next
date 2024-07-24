@@ -25,7 +25,7 @@ const NavLink = ({ children, href, idx }) => {
         y: -8
       }}
       href={href}
-      className="block text-5xl font-semibold text-[#5280BB]/80 transition-colors hover:text-[#5280BB]/100 md:text-7xl"
+      className="block text-5xl font-semibold text-[#ED9238]/100 transition-colors hover:text-white/100 md:text-7xl"
     >
       {children}
     </motion.a>
