@@ -15,7 +15,7 @@ const Nav = () => {
       <AnimatePresence>
         {
           active && (
-            <LinksOverlay />
+            <LinksOverlay setActive={setActive}/>
           )
         }
       </AnimatePresence>

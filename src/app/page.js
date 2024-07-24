@@ -13,11 +13,6 @@ export default async function Home() {
 
   return (
     <main className="bg-white flex flex-col items-center justify-center p-10 min-h-screen">
-
-      <Nav />
-      <ExpandableDiv />
-      <Basic />
-
       <Carousel works={works} />
 
       <div className="space-y-1 pt-[200px]">

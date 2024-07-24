@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-const NavLink = ({ children, href, idx }) => {
-  console.log(`index=${idx}`);
-  console.log(`href=${href}`);
+const NavLink = ({ children, href, idx, setActive }) => {
+  const pathname = usePathname();
 
   return (
-    <motion.a
+    <motion.div
       initial={{
         opacity: 0,
         y: -8
@@ -24,11 +25,12 @@ const NavLink = ({ children, href, idx }) => {
         opacity: 0,
         y: -8
       }}
-      href={href}
-      className="block text-5xl font-semibold text-[#ED9238]/100 transition-colors hover:text-white/100 md:text-7xl"
+      className={`block text-5xl font-semibold ${pathname === href ? 'text-[#ED9238]/100' : 'text-white/100'} transition-colors hover:text-white/100 md:text-7xl`}
     >
-      {children}
-    </motion.a>
+      <Link href={href} onClick={() => setActive((pv) => !pv)}>
+        {children}
+      </Link>
+    </motion.div>
   );
 };
 
