@@ -20,7 +20,7 @@ const SOCIAL_CTAs = [
 function FooterCTAs() {
   return (
     <>
-      <div className="absolute bottom-6 left-6 gap-4 ">
+      <div className="absolute bottom-6 left-6 gap-4 flex-col">
         {
           SOCIAL_CTAs.map((l, idx) => {
             return (
