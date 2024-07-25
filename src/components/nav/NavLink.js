@@ -25,7 +25,7 @@ const NavLink = ({ children, href, idx, setActive }) => {
         opacity: 0,
         y: -8
       }}
-      className={`block text-5xl font-semibold ${pathname === href ? 'text-[#ED9238]/100' : 'text-white/100'} transition-colors hover:text-white/100 md:text-7xl`}
+      className={`block text-5xl landscape:text-4xl font-semibold ${pathname === href ? 'text-[#ED9238]/100' : 'text-white/100'} transition-colors hover:text-white/100 md:text-7xl`}
     >
       <Link href={href} onClick={() => setActive((pv) => !pv)}>
         {children}
