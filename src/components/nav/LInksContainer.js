@@ -23,7 +23,7 @@ const LINKS = [
 
 const LinksContainer = ({ setActive }) => {
   return (
-    <motion.div className="space-y-4 pt-12 pl-4 md:pl-20 md:pt-6 sm:">
+    <motion.div className="space-y-4 pt-12 pl-24 md:pl-20 md:pt-6">
       {
         LINKS.map((l, idx) => {
           return (

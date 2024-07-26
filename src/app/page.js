@@ -4,15 +4,16 @@ import { getWorks } from '../lib/contentful';
 import NewsletterForm from '@/components/NewsletterForm';
 import Socials from '@/components/Socials';
 import Carousel from '@/components/Carousel';
-import ExpandableDiv from '@/components/ExpandableDiv';
-import Basic from '@/components/Basic';
-import Nav from "@/components/nav/Nav";
+import ShuffleHero from '@/components/hero/SuffleHero';
 
 export default async function Home() {
   const works = await getWorks();
 
   return (
     <main className="bg-white flex flex-col items-center justify-center p-10 min-h-screen">
+      <ShuffleHero />
+
+      {/*
       <Carousel works={works} />
 
       <div className="space-y-1 pt-[200px]">
@@ -23,6 +24,7 @@ export default async function Home() {
         <NewsletterForm />
         <Socials />
       </div>
+      */}
     </main>
   );
 }
