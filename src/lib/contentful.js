@@ -18,6 +18,17 @@ const getEntriesByType = async (type) => {
 
 export const getWorks = async () => {
   const results = await getEntriesByType('work');
-  const works = results.map((work) => work.fields);
+
+  const works = results.map((work, idx) =>
+  {
+    console.log(JSON.stringify(work, null, 2));
+
+    return {
+      id: idx,
+      src: `https:${work.fields.image.fields.file.url}`,
+    };
+  }
+  );
+
   return works;
 }

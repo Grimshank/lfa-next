@@ -9,9 +9,11 @@ import ShuffleHero from '@/components/hero/SuffleHero';
 export default async function Home() {
   const works = await getWorks();
 
+  console.log(`works->${JSON.stringify(works)}`);
+
   return (
     <main className="bg-white flex flex-col items-center justify-center p-10 min-h-screen">
-      <ShuffleHero />
+      <ShuffleHero works={works.slice(0, 16)}/>
 
       {/*
       <Carousel works={works} />
