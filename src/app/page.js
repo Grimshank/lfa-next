@@ -1,20 +1,15 @@
-import {Button} from '@/components/ui/button';
+import { motion } from 'framer-motion';
 import { getWorks } from '../lib/contentful';
-
-import NewsletterForm from '@/components/NewsletterForm';
-import Socials from '@/components/Socials';
-import Carousel from '@/components/Carousel';
 import ShuffleHero from '@/components/hero/SuffleHero';
+import Test from "@/components/Test";
 
 export default async function Home() {
   const works = await getWorks();
 
-  console.log(`works->${JSON.stringify(works)}`);
-
   return (
     <main className="bg-white flex flex-col items-center justify-center p-10 min-h-screen">
       <ShuffleHero works={works.slice(0, 16)}/>
-
+      <Test />
       {/*
       <Carousel works={works} />
 
