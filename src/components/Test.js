@@ -38,13 +38,10 @@ function Test() {
             pastel, Sean brings his subjects to life with rich textures and vibrant colors. His work
             beautifully captures the essence of diverse scenes, from tranquil natural landscapes to
             dynamic urban environments, all infused with a sense of warmth and emotion. In addition
-            to
-            his artistic pursuits, Sean is a dedicated teacher, sharing his expertise in oil and
+            to his artistic pursuits, Sean is a dedicated teacher, sharing his expertise in oil and
             acrylic painting with aspiring artists. Through his classes, he inspires others to
-            explore
-            their creativity and develop their skills. Sean's paintings are a celebration of the
-            world
-            around us, inviting viewers to see beauty in every corner.
+            explore their creativity and develop their skills. Sean&apos;s paintings are a celebration of the
+            world around us, inviting viewers to see beauty in every corner.
           </div>
           <div
             className="flex items-center justify-center"
