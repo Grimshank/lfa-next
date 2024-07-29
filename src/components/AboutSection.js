@@ -32,6 +32,8 @@ function AboutSection() {
           className="bg-white text-black p-5 mt-[-100px] md:mt-[0px] md:ml-[-200px]"
         >
           <div>
+            {
+              /*
             Sean LeCrone is an accomplished artist known for his captivating paintings of
             landscapes,
             cityscapes, figures, and farm animals. Using a versatile palette of oil, acrylic, and
@@ -42,6 +44,13 @@ function AboutSection() {
             acrylic painting with aspiring artists. Through his classes, he inspires others to
             explore their creativity and develop their skills. Sean&apos;s paintings are a celebration of the
             world around us, inviting viewers to see beauty in every corner.
+               */
+            }
+            Sean LeCrone is an artist specializing in landscapes, cityscapes, figures, and farm
+            animals. Working in oil, acrylic, and pastel, he captures diverse scenes with skill
+            and emotion. Sean also teaches oil and acrylic painting, encouraging others to explore
+            their creativity. His work invites viewers to appreciate the beauty of the world around
+            us.
           </div>
           <div
             className="flex items-center justify-center"

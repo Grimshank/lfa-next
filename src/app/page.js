@@ -11,6 +11,12 @@ export default async function Home() {
     <main className="bg-white flex flex-col items-center justify-center p-10 min-h-screen">
       <ShuffleHero works={works.slice(0, 16)}/>
       <AboutSection />
+      <AboutSection />
+      <AboutSection />
+      <AboutSection />
+      <AboutSection />
+      <AboutSection />
+      <AboutSection />
       {/*
       <Test />
       <Carousel works={works} />
