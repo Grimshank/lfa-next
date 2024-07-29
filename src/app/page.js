@@ -3,21 +3,19 @@ import { getWorks } from '../lib/contentful';
 import ShuffleHero from '@/components/hero/SuffleHero';
 import AboutSection from "@/components/AboutSection";
 import Test from "@/components/Test";
+import ImageHero from "@/components/hero/ImageHero";
+import ZoomingImageHero from "@/components/hero/ZoomingImageHero";
 
 export default async function Home() {
   const works = await getWorks();
 
   return (
-    <main className="bg-white flex flex-col items-center justify-center p-10 min-h-screen">
-      <ShuffleHero works={works.slice(0, 16)}/>
-      <AboutSection />
-      <AboutSection />
-      <AboutSection />
-      <AboutSection />
-      <AboutSection />
-      <AboutSection />
+    <main className="bg-white flex flex-col items-center justify-center min-h-screen">
+      <ZoomingImageHero />
       <AboutSection />
       {/*
+      <ImageHero />
+      <ShuffleHero works={works.slice(0, 16)}/>
       <Test />
       <Carousel works={works} />
 
