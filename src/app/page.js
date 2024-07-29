@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { getWorks } from '../lib/contentful';
 import ShuffleHero from '@/components/hero/SuffleHero';
+import AboutSection from "@/components/AboutSection";
 import Test from "@/components/Test";
 
 export default async function Home() {
@@ -9,8 +10,9 @@ export default async function Home() {
   return (
     <main className="bg-white flex flex-col items-center justify-center p-10 min-h-screen">
       <ShuffleHero works={works.slice(0, 16)}/>
-      <Test />
+      <AboutSection />
       {/*
+      <Test />
       <Carousel works={works} />
 
       <div className="space-y-1 pt-[200px]">
