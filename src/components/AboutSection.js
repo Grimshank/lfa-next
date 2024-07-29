@@ -29,7 +29,7 @@ function AboutSection() {
         }}
       >
         <div
-          className="bg-white text-black p-5 mt-[-200px] md:mt-[0px] md:ml-[-200px]"
+          className="bg-white text-black p-5 mt-[-100px] md:mt-[0px] md:ml-[-200px]"
         >
           <div>
             Sean LeCrone is an accomplished artist known for his captivating paintings of
