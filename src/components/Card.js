@@ -38,7 +38,7 @@ function Card({ image }) {
           )
         }
       </AnimatePresence>
-      <Image src={image} alt={image} fill style={{objectFit: 'cover'}} />
+      <Image src={image} alt={image} width={300} height={300} style={{objectFit: 'cover'}} />
     </motion.div>
   )
 }

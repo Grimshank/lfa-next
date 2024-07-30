@@ -2,6 +2,8 @@
 
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import Image from "next/image";
+import logo from "../../../public/logo.svg";
 
 const HeroSection = () => {
   const controls = useAnimation();
@@ -40,6 +42,15 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-[9] text-center text-white p-5">
+        <div className="flex flow-row items-center justify-center">
+          <Image
+            priority
+            src={logo}
+            alt="LeCrone Fine Art"
+            width={250}
+            height={250}
+          />
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-4">LeCrone Fine Art</h1>
         <p className="text-xl md:text-2xl">live a life of color</p>
       </div>

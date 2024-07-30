@@ -6,8 +6,8 @@ import Card from '@/components/Card';
 import useMeasure from 'react-use-measure';
 
 function Carousel({works}) {
-  const FAST_DURATION = 25;
-  const SLOW_DURATION = 75;
+  const FAST_DURATION = 60;
+  const SLOW_DURATION = 150;
 
   const [duration, setDuration] = useState(FAST_DURATION);
   let [ref, { width }] = useMeasure();
@@ -43,8 +43,10 @@ function Carousel({works}) {
     return controls?.stop;
   }, [rerender, xTranslation, duration, width]);
 
+  console.log(`${JSON.stringify(works, null, 2)}`);
+
   return (
-    <div className="py-8" style={{ position: 'fixed', width: '100vw', height: '300px', overflow: 'hidden' }}>
+    <div style={{ width: '100vw', height: '300px', overflow: 'hidden' }}>
       <motion.div
         className="absolute left-0 flex gap-4"
         style={{
@@ -62,10 +64,9 @@ function Carousel({works}) {
       >
         {
           [...works, ...works].map((work, index) => {
-            console.log(`WORK: ${JSON.stringify(work.image)}`);
 
             return (
-              <Card key={index} image={`https:${work.image.fields.file.url}`}/>
+              <Card key={index} image={work.src}/>
             )
           })
         }
