@@ -3,6 +3,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+import ArrowLeftIcon from '@heroicons/react/24/solid/ArrowLeftIcon';
+import ArrowRightIcon from '@heroicons/react/24/solid/ArrowRightIcon';
+
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -17,8 +20,13 @@ const ImageCarousel = ({ images }) => {
   const currentImage = images[currentIndex];
 
   return (
-    <div className="relative w-full flex items-center justify-center">
-      <div className="relative w-[250px] h-[250px] md:w-[500px] md:h-[500px] flex items-center justify-center overflow-hidden">
+    <div className="flex items-center justify-center w-full">
+      <button
+        onClick={handlePrev}
+      >
+        <ArrowLeftIcon className="h-12 w-12 text-blue-500"/>
+      </button>
+      <div className="relative w-[250p] h-[250px] md:w-[500px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <motion.img
           key={currentImage.src}
           src={currentImage.src}
@@ -27,23 +35,14 @@ const ImageCarousel = ({ images }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 2, type: "spring" }}
+          transition={{ duration: 0.5 }}
         />
       </div>
-      <div className="absolute inset-0 flex justify-between items-center">
-        <button
-          onClick={handlePrev}
-          className="bg-black bg-opacity-50 text-white px-4 py-2 m-4 rounded-md focus:outline-none"
-        >
-          &larr; Previous
-        </button>
-        <button
-          onClick={handleNext}
-          className="bg-black bg-opacity-50 text-white px-4 py-2 m-4 rounded-md focus:outline-none"
-        >
-          Next &rarr;
-        </button>
-      </div>
+      <button
+        onClick={handleNext}
+      >
+        <ArrowRightIcon className="h-12 w-12 text-blue-500"/>
+      </button>
     </div>
   );
 };
