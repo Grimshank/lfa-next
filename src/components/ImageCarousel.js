@@ -20,13 +20,13 @@ const ImageCarousel = ({ images }) => {
   const currentImage = images[currentIndex];
 
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex p-3 md:p-1 items-center justify-center w-full">
       <button
         onClick={handlePrev}
       >
         <ArrowLeftIcon className="h-12 w-12 text-blue-500"/>
       </button>
-      <div className="relative w-[250p] h-[250px] md:w-[500px] md:h-[500px] flex items-center justify-center overflow-hidden">
+      <div className="relative w-[200p] h-[200px] md:w-[500px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <motion.img
           key={currentImage.src}
           src={currentImage.src}
