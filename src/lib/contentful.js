@@ -25,6 +25,7 @@ export const getWorks = async () => {
     return {
       id: idx,
       src: `https:${work.fields.image.fields.file.url}`,
+      title: work.fields.title,
     };
   });
 
