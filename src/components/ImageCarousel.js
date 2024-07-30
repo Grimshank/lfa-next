@@ -17,7 +17,7 @@ const ImageCarousel = ({ images }) => {
   const currentImage = images[currentIndex];
 
   return (
-    <div className="relative w-full h-screen flex items-center justify-center">
+    <div className="relative w-full flex items-center justify-center">
       <div className="relative w-[250px] h-[250px] md:w-[500px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <motion.img
           key={currentImage.src}
