@@ -31,7 +31,7 @@ const ImageCarousel = ({ images }) => {
           key={currentImage.src}
           src={currentImage.src}
           alt="Artwork"
-          className="object-cover w-full h-full"
+          className="object-cover"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -41,7 +41,7 @@ const ImageCarousel = ({ images }) => {
       <button
         onClick={handleNext}
       >
-        <ArrowRightIcon className="h-12 w-12 text-blue-500"/>
+        <ArrowRightIcon className="h-6 w-6 md:h-12 md:w-12 text-blue-500"/>
       </button>
     </div>
   );
