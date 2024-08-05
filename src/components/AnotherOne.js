@@ -24,7 +24,7 @@ const AnotherOne = ({ works }) => {
   return (
     <div>
       {/* Carousel container */}
-      <div className='w-[500px] h-[500px] rounded-md overflow-hidden relative'>
+      <div className='w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-md overflow-hidden relative'>
         {/* Image container */}
         <div
           ref={carouselRef}
