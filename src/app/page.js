@@ -9,6 +9,7 @@ import Carousel from "@/components/Carousel";
 import ImageCarousel from "@/components/ImageCarousel";
 import ModernCarousel from "@/components/ModernCarousel";
 import AnotherCarousel from "@/components/AnotherCarousel";
+import AnotherOne from "@/components/AnotherOne";
 
 export default async function Home() {
   const works = await getWorks();
@@ -16,9 +17,10 @@ export default async function Home() {
   return (
     <main className="bg-white flex flex-col items-center justify-center min-h-screen">
       <ZoomingImageHero />
-      <AnotherCarousel works={works} />
+      <AnotherOne works={works} />
       <AboutSection />
       {/*
+      <AnotherCarousel works={works} />
       <ImageCarousel images={works} />
       <Carousel works={works} />
       <ImageHero />
