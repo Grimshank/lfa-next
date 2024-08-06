@@ -47,7 +47,7 @@ const Footer = () => {
               </Link>
             </div>
             <div>
-              <Link href="/" legacyBehavior>
+              <Link href="/works" legacyBehavior>
                 <a className="underline">WORKS</a>
               </Link>
             </div>
