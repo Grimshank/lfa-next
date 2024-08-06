@@ -18,7 +18,7 @@ export default async function Home() {
   return (
     <main className="bg-white flex flex-col items-center justify-center min-h-screen">
       <ZoomingImageHero/>
-      <h1 className="text-3xl font-medium w-[75%] m-auto text-center pt-14" style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>
+      <h1 className="text-3xl font-medium m-auto text-center pt-14" style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>
         Welcome to LeCrone Fine Art, home of artist and instructor Sean P. LeCrone.
       </h1>
       <AnotherOne works={works}/>
