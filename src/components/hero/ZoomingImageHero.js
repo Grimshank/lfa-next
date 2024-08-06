@@ -1,35 +1,29 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Image from "next/image";
 import logo from "../../../public/logo.svg";
 
 const HeroSection = () => {
   const controls = useAnimation();
+  const [running, setRunning] = useState(true);
 
   useEffect(() => {
-    const animateZoom = async () => {
-      const keyframes = [
-        { scale: 1.1, x: "-5%", y: "0%" },
-        { scale: 1.2, x: "0%", y: "10%" },
-        { scale: 1.25, x: "-10%", y: "10%" },
-        { scale: 1.35, x: "-5%", y: "-5%" },
-      ];
+    controls.start({
+      scale: [1, 1.1, 1.2, 1.25, 1.35, 1],
+      x: ['0%', '-5%', '0%', '-10%', '-5%', '0%'],
+      y: ['0%', '0%', '10%', '10%', '-5%', '0%'],
+      transition: {
+        repeat: Infinity,
+        duration: 20,
+        ease: 'easeInOut',
+      },
+    });
 
-      while (true) {
-        for (const frame of keyframes) {
-          await controls.start({
-            scale: frame.scale,
-            x: frame.x,
-            y: frame.y,
-            transition: { duration: 3 }
-          });
-        }
-      }
-    };
-
-    animateZoom();
+    return () => {
+      controls.stop();
+    }
   }, [controls]);
 
   return (
