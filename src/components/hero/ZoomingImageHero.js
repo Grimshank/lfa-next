@@ -36,7 +36,7 @@ const HeroSection = () => {
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero2_cropped.jpg')" }}
+        style={{ backgroundImage: "url('/hero.jpg')" }}
         animate={controls}
         initial={{ scale: 1, x: "0%", y: "0%" }}
       />
