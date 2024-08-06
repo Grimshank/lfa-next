@@ -82,7 +82,7 @@ const Footer = () => {
               </Link>
             </div>
             <div>
-              <Link href="/" legacyBehavior>
+              <Link href="/copyright_warning" legacyBehavior>
                 <a className="underline">COPYRIGHT WARNING</a>
               </Link>
             </div>
