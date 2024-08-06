@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Image from "next/image";
 import logo from "../../../public/logo.svg";
 
-const HeroSection = () => {
+const HeroSection = ({ title, subtitle }) => {
   const controls = useAnimation();
   const [running, setRunning] = useState(true);
 
@@ -45,8 +45,8 @@ const HeroSection = () => {
             height={250}
           />
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>LeCrone Fine Art</h1>
-        <p className="text-xl md:text-2xl">live a life of color</p>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>{title}</h1>
+        <p className="text-xl md:text-2xl">{subtitle}</p>
       </div>
     </div>
   );
