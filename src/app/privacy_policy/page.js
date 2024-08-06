@@ -95,7 +95,7 @@ export default async function Home() {
           <p className="py-1">
             We may use your personal information for the following purposes:
           </p>
-          <ul style={{'list-style-type': 'square'}} className="pl-7">
+          <ul style={{listStyleType: 'square'}} className="pl-7">
             <li>
               To make the site easier for you to use by not making you enter your personal
               information more than once.
