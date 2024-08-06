@@ -77,7 +77,7 @@ const Footer = () => {
               </Link>
             </div>
             <div>
-              <Link href="/" legacyBehavior>
+              <Link href="/terms_of_service" legacyBehavior>
                 <a className="underline">WEBSITE TERMS OF USE</a>
               </Link>
             </div>
