@@ -10,15 +10,20 @@ import ImageCarousel from "@/components/ImageCarousel";
 import ModernCarousel from "@/components/ModernCarousel";
 import AnotherCarousel from "@/components/AnotherCarousel";
 import AnotherOne from "@/components/AnotherOne";
+import Footer from "@/components/Footer";
 
 export default async function Home() {
   const works = await getWorks();
 
   return (
     <main className="bg-white flex flex-col items-center justify-center min-h-screen">
-      <ZoomingImageHero />
-      <AnotherOne works={works} />
-      <AboutSection />
+      <ZoomingImageHero/>
+      <h1 className="text-3xl font-medium w-[100%] m-auto text-center pt-14" style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>
+        Welcome to LeCrone Fine Art, home of artist and instructor Sean P. LeCrone.
+      </h1>
+      <AnotherOne works={works}/>
+      <AboutSection/>
+      <Footer/>
       {/*
       <AnotherCarousel works={works} />
       <ImageCarousel images={works} />

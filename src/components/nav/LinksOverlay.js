@@ -1,5 +1,5 @@
 import React from 'react';
-import LinksContainer from '@/components/nav/LInksContainer';
+import LinksContainer from '@/components/nav/LinksContainer';
 import Logo from '@/components/nav/Logo';
 import FooterCTAs from '@/components/nav/FooterCTAs';
 

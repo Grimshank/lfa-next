@@ -9,16 +9,20 @@ const LINKS = [
   },
   {
     title: "works",
-    href: "#",
+    href: "/works",
   },
   {
     title: "instruction",
-    href: "#",
+    href: "/instruction",
   },
   {
     title: "about",
     href: "/about",
   },
+  {
+    title: "faq",
+    href: "/faq",
+  }
 ];
 
 const LinksContainer = ({ setActive }) => {

@@ -14,7 +14,7 @@ const HeroSection = () => {
         { scale: 1.1, x: "-5%", y: "0%" },
         { scale: 1.2, x: "0%", y: "10%" },
         { scale: 1.25, x: "-10%", y: "10%" },
-        { scale: 1.35, x: "-5%", y: "20%" },
+        { scale: 1.35, x: "-5%", y: "-5%" },
       ];
 
       while (true) {
@@ -36,7 +36,7 @@ const HeroSection = () => {
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero2.jpg')" }}
+        style={{ backgroundImage: "url('/hero2_cropped.jpg')" }}
         animate={controls}
         initial={{ scale: 1, x: "0%", y: "0%" }}
       />
@@ -51,7 +51,7 @@ const HeroSection = () => {
             height={250}
           />
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">LeCrone Fine Art</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4" style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>LeCrone Fine Art</h1>
         <p className="text-xl md:text-2xl">live a life of color</p>
       </div>
     </div>
