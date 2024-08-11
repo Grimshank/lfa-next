@@ -14,7 +14,9 @@ export default async function Home() {
       <h1 className="text-3xl font-medium m-auto text-center pt-14" style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>
         Welcome to LeCrone Fine Art, home of artist and instructor Sean P. LeCrone.
       </h1>
-      <Slider works={works} />
+      <div className="py-5">
+        <Slider works={works} />
+      </div>
       <AboutSection/>
       <Footer/>
       {/*
