@@ -26,6 +26,15 @@ export const getWorks = async () => {
       id: idx,
       src: `https:${work.fields.image.fields.file.url}`,
       title: work.fields.title,
+      width: work.fields.image.fields.file.details.image.width,
+      height: work.fields.image.fields.file.details.image.height,
+      dimensions: `${work.fields.height}" x ${work.fields.width}"`,
+      medium: work.fields.medium,
+      substrate: work.fields.substrate,
+      framed: work.fields.framed,
+      sold: work.fields.sold,
+      price: `$${work.fields.price}.00`,
+      category: work.fields.category,
     };
   });
 

@@ -1,72 +1,45 @@
-"use client"
+'use client';
 
-import Image from 'next/image'
-import React, { useEffect, useRef, useState } from 'react'
+import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
 
-const AnotherOne = ({ works }) => {
-  // State and Ref initialization
-  const [currentImg, setCurrentImg] = useState(0)
-  const [carouselSize, setCarouselSize] = useState({ width: 0, height: 0 })
-  const carouselRef = useRef(null)
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-  // useEffect to get the initial carousel size
-  useEffect(() => {
-    let elem = carouselRef.current
-    let { width, height } = elem.getBoundingClientRect()
-    if (carouselRef.current) {
-      setCarouselSize({
-        width,
-        height,
-      })
-    }
-  }, [])
-
+const CustomSlider1 = ({ works }) => {
   return (
-    <div className="px-14 py-14">
-      <div>
-        <div
-          className='w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-md overflow-hidden relative'>
-          {/* Image container */}
-          <div
-            ref={carouselRef}
-            style={{
-              left: -currentImg * carouselSize.width
-            }}
-            className='w-full h-full absolute flex transition-all duration-300'>
-            {/* Map through data to render images */}
-            {works.map((v, i) => (
-              <div key={i} className='relative shrink-0 w-full h-full'>
-                <Image
-                  className='pointer-events-none'
-                  alt={`carousel-image-${i}`}
-                  fill
-                  src={v.src}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+    <div>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        loop={true}
+      >
+        {
+          works.map((work, index) => (
+            <SwiperSlide
+              key={index}
+              className='bg-red-200 !flex justify-center items-center'
+            >
+              <div
+                className='border-2 border-blue-500 rounded-lg overflow-hidden w-[200px] h-[300px] flex justify-center items-center'>
+                <img src={work.src} alt={work.title} className="w-full h-auto"/></div>
+            </SwiperSlide>
+          ))
+        }
 
-        {/* Navigation buttons */}
-        <div className='flex justify-center mt-3'>
-          <button
-            disabled={currentImg === 0}
-            onClick={() => setCurrentImg(prev => prev - 1)}
-            className={`border px-4 py-2 font-bold ${currentImg === 0 && 'opacity-50'}`}
-          >
-            {"<"}
-          </button>
-          <button
-            disabled={currentImg === works.length - 1}
-            onClick={() => setCurrentImg(prev => prev + 1)}
-            className={`border px-4 py-2 font-bold ${currentImg === works.length - 1 && 'opacity-50'}`}
-          >
-            {">"}
-          </button>
-        </div>
-      </div>
+        {
+          /*
+          <SlideNavButtons />
+          */
+        }
+      </Swiper>
     </div>
-  )
-}
+  );
+};
 
-export default AnotherOne;
+export default CustomSlider1;

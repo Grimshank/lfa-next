@@ -1,27 +1,20 @@
-import { motion } from 'framer-motion';
 import { getWorks } from '../lib/contentful';
-import ShuffleHero from '@/components/hero/SuffleHero';
 import AboutSection from "@/components/AboutSection";
-import Test from "@/components/Test";
-import ImageHero from "@/components/hero/ImageHero";
 import ZoomingImageHero from "@/components/hero/ZoomingImageHero";
-import Carousel from "@/components/Carousel";
-import ImageCarousel from "@/components/ImageCarousel";
-import ModernCarousel from "@/components/ModernCarousel";
-import AnotherCarousel from "@/components/AnotherCarousel";
-import AnotherOne from "@/components/AnotherOne";
 import Footer from "@/components/Footer";
+import Slider from "@/components/slider/Slider";
+
 
 export default async function Home() {
   const works = await getWorks();
 
   return (
-    <main className="bg-white flex flex-col items-center justify-center min-h-screen">
+    <main>
       <ZoomingImageHero title={'LeCrone Fine Art'} subtitle={'live a life of color'}/>
       <h1 className="text-3xl font-medium m-auto text-center pt-14" style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>
         Welcome to LeCrone Fine Art, home of artist and instructor Sean P. LeCrone.
       </h1>
-      <AnotherOne works={works}/>
+      <Slider works={works} />
       <AboutSection/>
       <Footer/>
       {/*
