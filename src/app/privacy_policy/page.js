@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Footer from "@/components/Footer";
 
-export default async function Home() {
+export default function Home() {
   return (
     <main className="bg-white flex items-center flex-col min-h-screen pt-20">
       <motion.div

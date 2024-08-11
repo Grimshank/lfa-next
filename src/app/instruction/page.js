@@ -1,12 +1,7 @@
-import { getWorks } from '@/lib/contentful';
-import Slider from '@/components/slider/Slider';
-
-async function Instruction() {
-  const works = await getWorks();
-
+function Instruction() {
   return (
     <div>
-      <Slider works={works}/>
+      Instruction
     </div>
   );
 }
