@@ -18,8 +18,8 @@ function Slider({ works}) {
       {
         works.map((work, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col justify-center items-center h-[250px] md:h-[500px]">
-              <img className="h-[250px] md:h-[400px]" src={work.src} alt={work.title} />
+            <div className="flex flex-col justify-center items-center h-[175px] md:h-[500px]">
+              <img className="h-[175px] md:h-[400px]" src={work.src} alt={work.title} />
             </div>
           </SwiperSlide>
         ))
