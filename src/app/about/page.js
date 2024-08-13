@@ -30,6 +30,7 @@ export default function About() {
           transition={{
             duration: 2.5,
           }}
+          className="mb-[30px]"
         >
           Born in the heart of Oklahoma and raised amidst the scenic landscapes of Arkansas, this
           talented artist has cultivated a unique perspective over his 20-year journey in painting.
@@ -45,6 +46,7 @@ export default function About() {
           transition={{
             duration: 2.5,
           }}
+          className="mb-[30px]"
         >
           Beyond his studio, he enjoys hanging out wherever there is live music, finding that the
           rhythm and energy of performances fuel his creativity. Long drives through the countryside
@@ -59,6 +61,7 @@ export default function About() {
           transition={{
             duration: 2.5,
           }}
+          className="mb-[30px]"
         >
           His love for farm animals often finds its way into his artwork, portraying them with warmth
           and affection. As an experienced instructor, he shares his passion by teaching oil and
