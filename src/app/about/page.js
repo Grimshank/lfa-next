@@ -19,6 +19,7 @@ export default function About() {
           transition={{
             duration: 2.5,
           }}
+          className="mx-[30px] md:mx-[0px]"
         >
           <Image src={portrait} alt="Sean LeCrone" width={500} height={500}/>
         </motion.div>
