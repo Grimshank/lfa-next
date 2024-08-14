@@ -52,17 +52,17 @@ const Footer = () => {
               </Link>
             </div>
             <div>
-              <Link href="/" legacyBehavior>
+              <Link href="/about" legacyBehavior>
                 <a className="underline">ABOUT</a>
               </Link>
             </div>
             <div>
-              <Link href="/" legacyBehavior>
+              <Link href="/instruction" legacyBehavior>
                 <a className="underline">INSTRUCTION</a>
               </Link>
             </div>
             <div>
-              <Link href="/" legacyBehavior>
+              <Link href="/faq" legacyBehavior>
                 <a className="underline">FAQ</a>
               </Link>
             </div>
