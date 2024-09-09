@@ -6,7 +6,7 @@ import ZoomingImageHero from "@/components/hero/ZoomingImageHero";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
-import portrait from "../../../public/portrait.png";
+import portrait from "../../../public/portrait.jpg";
 
 export default function About() {
   return (
