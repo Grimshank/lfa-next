@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from "next/link";
 
-import portrait from '../../public/portrait.png';
+import portrait from '../../public/portrait.jpg';
 
 function AboutSection() {
   return (
