@@ -25,6 +25,13 @@ function MasonryGallery({works}) {
               <div>{work.dimensions}</div>
               <div>{work.medium} on {work.substrate}</div>
               <div>{work.price}</div>
+              {
+                work.sold ? (
+                  <div>SOLD</div>
+                ) : (
+                  <div>available</div>
+                )
+              }
             </div>
           </div>
         ))

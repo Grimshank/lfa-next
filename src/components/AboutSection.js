@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from "next/link";
 
 import portrait from '../../public/portrait.png';
 
@@ -55,13 +56,15 @@ function AboutSection() {
           <div
             className="flex items-center justify-center"
           >
-            <motion.div
-              className="bg-[#ED9238] p-6 mt-4 rounded-xl"
-              initial={{scale: 1}}
-              whileHover={{scale: 1.05}}
-            >
-              LEARN MORE ABOUT SEAN
-            </motion.div>
+            <Link href="/about" legacyBehavior>
+              <motion.div
+                className="bg-[#ED9238] p-6 mt-4 rounded-xl"
+                initial={{scale: 1}}
+                whileHover={{scale: 1.05}}
+              >
+                LEARN MORE ABOUT SEAN
+              </motion.div>
+            </Link>
           </div>
 
         </div>

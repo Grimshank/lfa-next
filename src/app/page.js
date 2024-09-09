@@ -1,8 +1,9 @@
-import { getWorks } from '../lib/contentful';
-import AboutSection from "@/components/AboutSection";
-import ZoomingImageHero from "@/components/hero/ZoomingImageHero";
-import Footer from "@/components/Footer";
-import Slider from "@/components/slider/Slider";
+import { getWorks } from '@/lib/contentful';
+import AboutSection from '@/components/AboutSection';
+import ZoomingImageHero from '@/components/hero/ZoomingImageHero';
+import Footer from '@/components/Footer';
+import Slider from '@/components/slider/Slider';
+import NewsletterSection from '@/components/NewsletterSections';
 
 
 export default async function Home() {
@@ -18,6 +19,7 @@ export default async function Home() {
         <Slider works={works} />
       </div>
       <AboutSection/>
+      <NewsletterSection />
       <Footer/>
       {/*
       <AnotherCarousel works={works} />

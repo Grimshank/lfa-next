@@ -21,6 +21,12 @@ const ImageGallery = ({ works }) => {
                 <div>{work.dimensions}</div>
                 <div>{work.medium} on {work.substrate}</div>
                 <div>{work.price}</div>
+                <div>Hi: {work.sold}</div>
+                {
+                  work.sold ? (
+                    <div>Sold Out</div>
+                  ) : null
+                }
               </div>
             </div>
           ))
