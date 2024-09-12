@@ -18,10 +18,6 @@ function NewsletterSection() {
 
     const email = input;
 
-    if (!email || !button) {
-      return;
-    }
-
     const res = await fetch('/api/addSubscription', {
       method: 'POST',
       headers: {
@@ -29,6 +25,10 @@ function NewsletterSection() {
       },
       body: JSON.stringify({ email }),
     });
+
+    if (!email) {
+      return;
+    }
 
     const data = await res.json();
 
