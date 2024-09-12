@@ -46,10 +46,18 @@ function NewsletterSection() {
 
   return (
     <div className="w-full px-8 py-12 bg-[#FFFFFF] grid grid-cols-1 items-center justify-center">
-      <h1>
+      <h1
+        className="text-3xl font-medium mx-auto mb-4"
+        style={{fontFamily: 'mrs-eaves-roman-small-caps'}}
+      >
         LeCrone Fine Art Newsletter
       </h1>
-      <div>
+      <div className="mx-auto mb-4">
+        Sign up for LeCrone Fine Art news and updates, straight to your inbox.
+      </div>
+      <div
+        className="mx-auto mb-4"
+      >
         <form
           onSubmit={handleSubmit}
         >
@@ -59,8 +67,9 @@ function NewsletterSection() {
             type="email"
             placeholder="E-mail address"
             required
+            className="focus:outline-none focus:ring-2 focus:ring-[#ED9238] border border-b-gray-50 h-10 px-2"
           />
-          <button disabled={!input} type="submit">
+          <button disabled={!input} type="submit" className="rounded text-white p-2 ml-2 bg-[#ED9238]">
             <span className="default">Subscribe</span>
           </button>
         </form>
@@ -85,6 +94,9 @@ function NewsletterSection() {
             </div>
           </div>
         )}
+      </div>
+      <div className="mx-auto mb-4">
+        We respect your privacy and will never share your information.
       </div>
     </div>
   );
