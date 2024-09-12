@@ -50,16 +50,20 @@ function NewsletterSection() {
         LeCrone Fine Art Newsletter
       </h1>
       <div>
-        <input
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          type="email"
-          placeholder="E-mail address"
-          required
-        />
-        <button disabled={!input} type="submit">
-          <span className="default">Subscribe</span>
-        </button>
+        <form
+          onSubmit={handleSubmit}
+        >
+          <input
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            type="email"
+            placeholder="E-mail address"
+            required
+          />
+          <button disabled={!input} type="submit">
+            <span className="default">Subscribe</span>
+          </button>
+        </form>
       </div>
       <div>
         {(successMessage || errorMessage) && (
