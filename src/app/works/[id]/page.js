@@ -9,7 +9,7 @@ export default async function Work({ params }) {
 
   return (
     <div
-      className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 mt-52 md:mt-0"
+      className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 mt-12 md:mt-0"
     >
       <div>
         <Image src={work.src} alt={work.title} width={1024} height={1024}/>
