@@ -4,7 +4,6 @@ import React, {useState} from 'react';
 
 function NewsletterSection() {
   const [input, setInput] = useState('');
-  const [active, setActive] = useState(false);
   const [successMessage, setSuccessMessage] = useState(undefined);
   const [errorMessage, setErrorMessage] = useState(undefined);
 
@@ -12,6 +11,10 @@ function NewsletterSection() {
     e.preventDefault();
 
     const email = input;
+
+    if (!email) {
+      return;
+    }
 
     const res = await fetch('/api/addSubscription', {
       method: 'POST',
@@ -21,9 +24,6 @@ function NewsletterSection() {
       body: JSON.stringify({ email }),
     });
 
-    if (!email) {
-      return;
-    }
 
     const data = await res.json();
 
