@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import Masonry from "react-masonry-css";
-import {motion} from "framer-motion";
+import Link from "next/link";
+import Masonry from 'react-masonry-css';
+import { motion } from 'framer-motion';
 import { track } from '@vercel/analytics';
+import Image from 'next/image';
 
 function MasonryGallery({works}) {
   function handleWorkClicked(work) {
@@ -24,7 +25,9 @@ function MasonryGallery({works}) {
               whileTap={{scale: 0.95}}
               onClick={() => handleWorkClicked(work)}
             >
-              <img src={work.src} alt={`Gallery image ${index + 1}`} className="w-full h-auto"/>
+              <Link href={`/works/${work.id}`}>
+                <Image src={work.src} alt={`Gallery image ${index + 1}`} width={512} height={512} className="w-full h-auto"/>
+              </Link>
             </motion.div>
             <div className="w-full flex flex-col items-start justify-normal pt-3  ">
               <div className="font-bold">{work.title}</div>

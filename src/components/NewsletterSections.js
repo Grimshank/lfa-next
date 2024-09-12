@@ -1,11 +1,6 @@
 "use client";
 
 import React, {useState} from 'react';
-import { motion } from 'framer-motion';
-import {getPlaneKeyframes} from "@/lib/getPlaneKeyframes";
-import {getTrailsKeyframes} from "@/lib/getTrailsKeyframes";
-import {CheckIcon} from "@heroicons/react/24/outline";
-import {XMarkIcon} from "@heroicons/react/24/solid";
 
 function NewsletterSection() {
   const [input, setInput] = useState('');
