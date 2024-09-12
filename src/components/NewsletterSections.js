@@ -4,6 +4,8 @@ import React, {useState} from 'react';
 import { motion } from 'framer-motion';
 import {getPlaneKeyframes} from "@/lib/getPlaneKeyframes";
 import {getTrailsKeyframes} from "@/lib/getTrailsKeyframes";
+import {CheckIcon} from "@heroicons/react/24/outline";
+import {XMarkIcon} from "@heroicons/react/24/solid";
 
 function NewsletterSection() {
   const [input, setInput] = useState('');
@@ -58,6 +60,27 @@ function NewsletterSection() {
         <button disabled={!input} type="submit">
           <span className="default">Subscribe</span>
         </button>
+      </div>
+      <div>
+        {(successMessage || errorMessage) && (
+          <div>
+            <div className="text-xs sm:text-sm text-[#4B4C52]">
+              {successMessage ? (
+                <p>
+                  We&apos;ve added{" "}
+                  <span className="text-[#ADB0B1]">
+                    {successMessage.email_address}
+                  </span>{" "}
+                  to our waitlist. We&apos;ll let you know when we launch!
+                </p>
+              ) : (
+                <p>
+                  You are already added to our waitlist. We&apos;ll let you know when we launch!
+                </p>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
