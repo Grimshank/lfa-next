@@ -3,8 +3,13 @@
 import Image from "next/image";
 import Masonry from "react-masonry-css";
 import {motion} from "framer-motion";
+import { track } from '@vercel/analytics';
 
 function MasonryGallery({works}) {
+  function handleWorkClicked(work) {
+    track('Work Engagement', {title: work.title});
+  }
+
   return (
     <Masonry
       breakpointCols={{default: 3, 1100: 2, 700: 1}}
@@ -17,6 +22,7 @@ function MasonryGallery({works}) {
             <motion.div
               whileHover={{scale: 1.05}}
               whileTap={{scale: 0.95}}
+              onClick={() => handleWorkClicked(work)}
             >
               <img src={work.src} alt={`Gallery image ${index + 1}`} className="w-full h-auto"/>
             </motion.div>
