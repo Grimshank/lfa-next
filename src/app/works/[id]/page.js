@@ -3,6 +3,7 @@ import {getWork, getWorks} from '@/lib/contentful';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import {track} from "@vercel/analytics";
 
 function getPrevAndNext(id, works) {
   const index = works.findIndex(cur => cur.id === id);
@@ -11,8 +12,8 @@ function getPrevAndNext(id, works) {
   const prevIndex = index - 1 < 0 ? works.length - 1 : index - 1;
 
   return {
-    previous: works[prevIndex].id,
-    next: works[nextIndex].id,
+    previous: works[prevIndex],
+    next: works[nextIndex],
   };
 }
 
@@ -67,11 +68,19 @@ export default async function Work({ params }) {
             ) : null
           }
           <div className="mt-6">
-            <Link className="rounded text-white p-2 bg-[#5280BB]" href={`/works/${previous}`}>
-              <button>Previous</button>
+            <Link className="rounded text-white p-2 bg-[#5280BB]" href={`/works/${previous.id}`}>
+              <button
+                onClick={() => track('Work Engagement', {title: previous.title})}
+              >
+                Previous
+              </button>
             </Link>
-            <Link className="ml-3 rounded text-white p-2 bg-[#5280BB]" href={`/works/${next}`}>
-              <button>Next</button>
+            <Link className="ml-3 rounded text-white p-2 bg-[#5280BB]" href={`/works/${next.id}`}>
+              <button
+                onClick={() => track('Work Engagement', {title: next.title})}
+              >
+                Next
+              </button>
             </Link>
           </div>
         </div>
