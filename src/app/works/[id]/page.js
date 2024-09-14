@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {getWork, getWorks} from '@/lib/contentful';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
-import {track} from "@vercel/analytics";
 
 function getPrevAndNext(id, works) {
   const index = works.findIndex(cur => cur.id === id);
