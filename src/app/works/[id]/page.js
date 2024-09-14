@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {getWork, getWorks} from '@/lib/contentful';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -24,6 +24,10 @@ export default async function Work({ params }) {
   const works = await getWorks();
 
   const { previous, next } = getPrevAndNext(work.id, works);
+
+  useEffect(() => {
+    track('Work Engagement', {title: work.title});
+  }, []);
 
   return (
     <div>
@@ -69,16 +73,12 @@ export default async function Work({ params }) {
           }
           <div className="mt-6">
             <Link className="rounded text-white p-2 bg-[#5280BB]" href={`/works/${previous.id}`}>
-              <button
-                onClick={() => track('Work Engagement', {title: previous.title})}
-              >
+              <button>
                 Previous
               </button>
             </Link>
             <Link className="ml-3 rounded text-white p-2 bg-[#5280BB]" href={`/works/${next.id}`}>
-              <button
-                onClick={() => track('Work Engagement', {title: next.title})}
-              >
+              <button>
                 Next
               </button>
             </Link>
