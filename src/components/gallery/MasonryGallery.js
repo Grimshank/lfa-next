@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 function MasonryGallery({works}) {
   function handleWorkClicked(work) {
+    track('Work Engagement', {title: work.title});
   }
 
   return (

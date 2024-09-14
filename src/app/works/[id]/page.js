@@ -25,10 +25,6 @@ export default async function Work({ params }) {
 
   const { previous, next } = getPrevAndNext(work.id, works);
 
-  useEffect(() => {
-    track('Work Engagement', {title: work.title});
-  }, []);
-
   return (
     <div>
       <div
@@ -72,16 +68,7 @@ export default async function Work({ params }) {
             ) : null
           }
           <div className="mt-6">
-            <Link className="rounded text-white p-2 bg-[#5280BB]" href={`/works/${previous.id}`}>
-              <button>
-                Previous
-              </button>
-            </Link>
-            <Link className="ml-3 rounded text-white p-2 bg-[#5280BB]" href={`/works/${next.id}`}>
-              <button>
-                Next
-              </button>
-            </Link>
+            <PrevNext prev={previous} next={next} />
           </div>
         </div>
       </div>
