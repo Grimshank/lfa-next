@@ -75,7 +75,7 @@ export default function InquiryForm({ title }) {
           </form>
         ) : (
           <div>
-            <div>Thanks for your interest in <b>{title}</b>.</div>
+            <div>Thanks for your interest in {title==='Commission' ? 'a ' : null}<b>{title}</b>.</div>
             <div className="mt-2">Your inquiry has been submitted successfully.</div>
           </div>
         )
