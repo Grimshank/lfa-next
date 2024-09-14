@@ -3,6 +3,7 @@ import {getWork, getWorks} from '@/lib/contentful';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
+import PrevNext from '@/components/PrevNext';
 
 function getPrevAndNext(id, works) {
   const index = works.findIndex(cur => cur.id === id);
