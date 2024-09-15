@@ -57,6 +57,11 @@ export default function About() {
             This step allows students to understand the structure of their painting without being bogged
             down by details too early on.
           </p>
+          <div className="mt-6 flex flex-col md:flex-row items-center justify-center">
+            <Image className="rounded-2xl" src="/progression_1.jpg" alt="progression_1" width={560/2} height={418/2}/>
+            <Image className="ml-4 mt-4 md:mt-0 rounded-2xl" src="/progression_2.jpg" alt="progression_2" width={560/2} height={418/2}/>
+            <Image className="ml-4 mt-4 md:mt-0 rounded-2xl" src="/progression_3.jpg" alt="progression_3" width={560/2} height={418/2}/>
+          </div>
         </motion.div>
         <motion.div
           initial={{opacity: 0}}
