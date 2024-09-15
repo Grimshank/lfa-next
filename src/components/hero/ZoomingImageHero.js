@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Image from "next/image";
 import logo from "../../../public/logo.svg";
 
-const HeroSection = ({ title, subtitle }) => {
+const HeroSection = ({ title, subtitle, src }) => {
   const controls = useAnimation();
   const [running, setRunning] = useState(true);
 
@@ -30,7 +30,7 @@ const HeroSection = ({ title, subtitle }) => {
     <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero2_cropped.jpg')" }}
+        style={{ backgroundImage: `url('${src}')` }}
         animate={controls}
         initial={{ scale: 1, x: "0%", y: "0%" }}
       />

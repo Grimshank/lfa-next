@@ -11,7 +11,7 @@ import classStudents from "../../../public/class_students.jpg";
 export default function About() {
   return (
     <main>
-      <ZoomingImageHero title={'Painting Instruction'} subtitle={'learn oil and acrylic painting'}/>
+      <ZoomingImageHero title={'Painting Instruction'} subtitle={'learn oil and acrylic painting'} src="/morning_hayfield.jpg"/>
       <div className="w-[90%] md:w-[75%] mx-auto mt-[30px]">
         <div>
           <p className="italic font-bold mb-[10px]">

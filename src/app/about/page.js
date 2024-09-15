@@ -11,7 +11,7 @@ import portrait from "../../../public/portrait.jpg";
 export default function About() {
   return (
     <main>
-      <ZoomingImageHero title={'Sean P. LeCrone'} subtitle={''}/>
+      <ZoomingImageHero title={'Sean P. LeCrone'} subtitle={''} src="/the_party.jpg"/>
       <div className="flex items-center justify-center my-[30px]">
         <motion.div
           initial={{opacity: 0}}

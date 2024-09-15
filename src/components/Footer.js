@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="relative w-full flex justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/footer.jpg')" }}
+        style={{ backgroundImage: "url('/rendezvous.jpg')" }}
       />
       <div className="absolute inset-0 bg-black opacity-50" />
       <div className="relative z-[9] text-center text-white p-5">

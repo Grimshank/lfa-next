@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <main>
-      <ZoomingImageHero title={'LeCrone Fine Art'} subtitle={'live a life of color'}/>
+      <ZoomingImageHero title={'LeCrone Fine Art'} subtitle={'live a life of color'} src='/palette.jpg'/>
       <h1 className="text-3xl font-medium m-auto text-center pt-14" style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>
         Welcome to LeCrone Fine Art, home of artist and instructor Sean P. LeCrone.
       </h1>

@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function About() {
   return (
     <main>
-      <ZoomingImageHero title={'Frequently Asked Questions'} subtitle={''}/>
+      <ZoomingImageHero title={'Frequently Asked Questions'} subtitle={''} src='/palette.jpg'/>
       <div className="w-[90%] md:w-[75%] mx-auto mt-[30px]">
         <motion.div
           initial={{opacity: 0}}
