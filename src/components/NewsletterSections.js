@@ -76,18 +76,18 @@ function NewsletterSection() {
       <div>
         {(successMessage || errorMessage) && (
           <div>
-            <div className="text-xs sm:text-sm text-[#4B4C52]">
+            <div className="flex flex-row items-center justify-items-center text-xs sm:text-sm text-[#4B4C52]">
               {successMessage ? (
                 <p>
                   We&apos;ve added{" "}
                   <span className="text-[#ADB0B1]">
                     {successMessage.email_address}
                   </span>{" "}
-                  to our waitlist. We&apos;ll let you know when we launch!
+                  to our e-mail list. We&apos;ll let you know when there are updates!
                 </p>
               ) : (
                 <p>
-                  You are already added to our waitlist. We&apos;ll let you know when we launch!
+                  You are already on our e-mail list. We&apos;ll let you know when there are updates!
                 </p>
               )}
             </div>
