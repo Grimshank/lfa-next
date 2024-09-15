@@ -23,7 +23,6 @@ function sendMail(title, name, email, phone, comments){
         console.error(`could not send inquiry email: ${err.message}`);
         reject(err);
       } else {
-        console.warn('inquiry email was sent')
         resolve();
       }
     });
@@ -51,6 +50,7 @@ export async function POST(request) {
 
   try {
     await sql`INSERT INTO Inquiries (title, name, email, phone, comments) VALUES (${title}, ${name}, ${email}, ${phone}, ${comments});`;
+
     await sendMail(title, name, email, phone, comments);
 
     return new Response(JSON.stringify({ }));
