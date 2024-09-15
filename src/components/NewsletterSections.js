@@ -53,21 +53,25 @@ function NewsletterSection() {
       <div
         className="mx-auto mb-4"
       >
-        <form
-          onSubmit={handleSubmit}
-        >
-          <input
-            value={input}
-            onChange={e => setInput(e.target.value)}
-            type="email"
-            placeholder="E-mail address"
-            required
-            className="focus:outline-none focus:ring-2 focus:ring-[#ED9238] border border-b-gray-50 h-10 px-2"
-          />
-          <button disabled={!input} type="submit" className="rounded text-white p-2 ml-2 bg-[#ED9238]">
-            <span className="default">Subscribe</span>
-          </button>
-        </form>
+        {
+          (!successMessage && !errorMessage) && (
+            <form
+              onSubmit={handleSubmit}
+            >
+              <input
+                value={input}
+                onChange={e => setInput(e.target.value)}
+                type="email"
+                placeholder="E-mail address"
+                required
+                className="focus:outline-none focus:ring-2 focus:ring-[#ED9238] border border-b-gray-50 h-10 px-2"
+              />
+              <button disabled={!input} type="submit" className="rounded text-white p-2 ml-2 bg-[#ED9238]">
+                <span className="default">Subscribe</span>
+              </button>
+            </form>
+          )
+        }
       </div>
       <div>
         {(successMessage || errorMessage) && (
