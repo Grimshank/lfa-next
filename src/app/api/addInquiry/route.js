@@ -48,9 +48,9 @@ export async function POST(request) {
         blah = 'ok'
         console.warn('inquiry email was sent')
       }
-    });
 
-    return new Response(JSON.stringify({ blah }));
+      return new Response(JSON.stringify({ blah }));
+    });
   } catch (err) {
     return new Response(JSON.stringify({ error: JSON.parse(err.message) }));
   }
