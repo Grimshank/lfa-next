@@ -76,17 +76,17 @@ function NewsletterSection() {
       {(successMessage || errorMessage) && (
         <div className="mb-8 flex flex-row items-center justify-items-center text-xs sm:text-sm text-[#4B4C52]">
           {successMessage ? (
-            <p>
+            <div className="text-center">
               We&apos;ve added{" "}
               <span className="text-[#ADB0B1]">
                 {successMessage.email_address}
               </span>{" "}
               to our e-mail list. We&apos;ll let you know when there are updates!
-            </p>
+            </div>
           ) : (
-            <p>
+            <div>
               You are already on our e-mail list. We&apos;ll let you know when there are updates!
-            </p>
+            </div>
           )}
         </div>
       )}
