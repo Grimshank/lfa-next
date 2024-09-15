@@ -27,6 +27,7 @@ function sendMail(title, name, email, phone, comments){
         resolve();
       }
     });
+  });
 }
 
 export async function POST(request) {
