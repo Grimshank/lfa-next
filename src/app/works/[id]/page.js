@@ -61,8 +61,10 @@ export default async function Work({ params }) {
           {
             !work.sold ? (
               <div className="mt-4">
-                <Link className="rounded text-white p-2 bg-[#ED9238]" href={`/inquire/${work.id}`}>
-                  CONTACT SEAN ABOUT THIS ARTWORK
+                <Link href={`/inquire/${work.id}`}>
+                  <div className="text-center md:w-1/2 rounded text-white p-2 bg-[#ED9238]">
+                    CONTACT SEAN ABOUT THIS ARTWORK
+                  </div>
                 </Link>
               </div>
             ) : null

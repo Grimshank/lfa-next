@@ -6,8 +6,6 @@ import Footer from "@/components/Footer";
 import {motion} from "framer-motion";
 import Image from "next/image";
 
-import classStudents from "../../../public/class_students.jpg";
-
 export default function About() {
   return (
     <main>
@@ -39,9 +37,9 @@ export default function About() {
             transition={{
               duration: 2.5,
             }}
-            className="mt-[30px] mx-[30px] md:mx-[0px] w-full flex flex-row items-center justify-center"
+            className="mt-[30px] w-full flex flex-row items-center justify-center"
           >
-            <Image className="rounded-2xl" src={classStudents} alt="ClassStudents" width={560} height={418}/>
+            <Image className="rounded-2xl" src="/class_students.jpg" alt="ClassStudents" width={560} height={418}/>
           </motion.div>
         </motion.div>
         <motion.div
