@@ -53,7 +53,7 @@ export async function POST(request) {
     await sql`INSERT INTO Inquiries (title, name, email, phone, comments) VALUES (${title}, ${name}, ${email}, ${phone}, ${comments});`;
     await sendMail(title, name, email, phone, comments);
 
-    return new Response(JSON.stringify({ blah }));
+    return new Response(JSON.stringify({ }));
   } catch (err) {
     return new Response(JSON.stringify({ error: JSON.parse(err.message) }));
   }
