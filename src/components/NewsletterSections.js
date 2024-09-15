@@ -73,27 +73,23 @@ function NewsletterSection() {
           )
         }
       </div>
-      <div>
-        {(successMessage || errorMessage) && (
-          <div>
-            <div className="flex flex-row items-center justify-items-center text-xs sm:text-sm text-[#4B4C52]">
-              {successMessage ? (
-                <p>
-                  We&apos;ve added{" "}
-                  <span className="text-[#ADB0B1]">
-                    {successMessage.email_address}
-                  </span>{" "}
-                  to our e-mail list. We&apos;ll let you know when there are updates!
-                </p>
-              ) : (
-                <p>
-                  You are already on our e-mail list. We&apos;ll let you know when there are updates!
-                </p>
-              )}
-            </div>
-          </div>
-        )}
-      </div>
+      {(successMessage || errorMessage) && (
+        <div className="mb-8 flex flex-row items-center justify-items-center text-xs sm:text-sm text-[#4B4C52]">
+          {successMessage ? (
+            <p>
+              We&apos;ve added{" "}
+              <span className="text-[#ADB0B1]">
+                {successMessage.email_address}
+              </span>{" "}
+              to our e-mail list. We&apos;ll let you know when there are updates!
+            </p>
+          ) : (
+            <p>
+              You are already on our e-mail list. We&apos;ll let you know when there are updates!
+            </p>
+          )}
+        </div>
+      )}
       <div className="mx-auto mb-4">
         We respect your privacy and will never share your information.
       </div>
