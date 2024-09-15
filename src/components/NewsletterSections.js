@@ -74,7 +74,7 @@ function NewsletterSection() {
         }
       </div>
       {(successMessage || errorMessage) && (
-        <div className="mb-8 flex flex-row items-center justify-items-center text-xs sm:text-sm text-[#4B4C52]">
+        <div className="mb-8 mx-auto text-xs sm:text-sm text-[#4B4C52]">
           {successMessage ? (
             <div className="text-center">
               We&apos;ve added{" "}
