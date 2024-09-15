@@ -31,8 +31,10 @@ export async function POST(request) {
   try {
     await sql`INSERT INTO Inquiries (title, name, email, phone, comments) VALUES (${title}, ${name}, ${email}, ${phone}, ${comments});`;
 
+    let blah = 'nothing'
+
     const mailerOptions = {
-      from: 'no.reply@lecronefine.com',
+      from: 'no.reply@lecronefineart.com',
       to: 'slecrone@gmail.com',
       subject: `Customer inquiry: '${title}'`,
       text: `A customer has inquired about '${title}'.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nComments: ${comments}`,
@@ -40,13 +42,15 @@ export async function POST(request) {
 
     transporter.sendMail(mailerOptions, (err, info) => {
       if (err) {
+        blah = err.message;
         console.error(`could not send inquiry email: ${err.message}`);
       } else {
+        blah = 'ok'
         console.warn('inquiry email was sent')
       }
     });
 
-    return new Response(JSON.stringify({ }));
+    return new Response(JSON.stringify({ blah }));
   } catch (err) {
     return new Response(JSON.stringify({ error: JSON.parse(err.message) }));
   }
