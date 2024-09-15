@@ -32,7 +32,7 @@ export async function POST(request) {
     await sql`INSERT INTO Inquiries (title, name, email, phone, comments) VALUES (${title}, ${name}, ${email}, ${phone}, ${comments});`;
 
     const mailerOptions = {
-      from: 'no-reply@lecronefine.com',
+      from: 'no.reply@lecronefine.com',
       to: 'slecrone@gmail.com',
       subject: `Customer inquiry: '${title}'`,
       text: `A customer has inquired about '${title}'.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nComments: ${comments}`,
@@ -40,7 +40,9 @@ export async function POST(request) {
 
     transporter.sendMail(mailerOptions, (err, info) => {
       if (err) {
-        console.info(`could not send inquiry email: ${err.message}`);
+        console.error(`could not send inquiry email: ${err.message}`);
+      } else {
+        console.warn('inquiry email was sent')
       }
     });
 
