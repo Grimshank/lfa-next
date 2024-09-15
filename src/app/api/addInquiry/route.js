@@ -21,10 +21,10 @@ function sendMail(title, name, email, phone, comments){
     transporter.sendMail(mailerOptions, (err) => {
       if (err) {
         console.error(`could not send inquiry email: ${err.message}`);
-        resolve();
+        reject(err);
       } else {
         console.warn('inquiry email was sent')
-        reject(err);
+        resolve();
       }
     });
 }
