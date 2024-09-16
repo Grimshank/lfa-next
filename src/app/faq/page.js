@@ -89,15 +89,14 @@ export default function About() {
                 <p>
                   Sean primarily teaches at the Art Group Gallery. The gallery is located at
                   Pleasant Ridge Town Center, 11525 Cantrell Road in Little Rock, Arkansas.
-                  Currently
-                  there is only one class that meets from 9am-11am every Wednesday morning.
+                  Currently there is only one class that meets from 9am-11am every Wednesday morning.
                 </p>
               </div>
               <div className="mt-2">
                 <p>
-                  He is also a volunteer instructor for tor LifeQuest of Arkansas.  You can find out
+                  He is also a volunteer instructor for for LifeQuest of Arkansas.  You can find out
                   more about LifeQuest and if Sean is scheduled to teach in upcoming classes by visiting
-                  the <a href="https://lifequestofarkansas.org">LifeQuest of Arkansas</a> website.
+                  the <a className="text-[#5280BB]" href="https://lifequestofarkansas.org">LifeQuest of Arkansas</a> website.
                 </p>
               </div>
             </div>
@@ -125,8 +124,7 @@ export default function About() {
               Pleasant Ridge Town Center, 11525 Cantrell Road in Little Rock, Arkansas. The hours
               are
               Monday through Saturday from 11am-5pm and Sunday from 1pm-5pm. You can see available
-              works by Sean and other artists at <a
-              href="https://artgrouparkansas.com">www.artgrouparkansas.com</a>.
+              works by Sean and other artists at <a className="text-[#5280BB]" href="https://artgrouparkansas.com">www.artgrouparkansas.com</a>.
             </p>
           </div>
         </motion.div>
