@@ -24,7 +24,7 @@ function Slider({ works }) {
       {
         works.map((work, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col justify-center items-center h-[175px] md:h-[500px]">
+            <div className="flex flex-col justify-center items-center">
               <Link href={`/works/${work.id}`}>
                 <Image
                   onClick={() => handleWorkClicked(work)}
