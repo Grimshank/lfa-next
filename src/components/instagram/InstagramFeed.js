@@ -40,7 +40,7 @@ export default async function InstagramFeed() {
             return (
               <div key={post.id} className="m-2">
                 <Link href={post.permalink}>
-                  <Image src={post.media_url} alt={post.id} width={256} height={256}/>
+                  <Image src={post.media_url} alt={post.id} width={512} height={512}/>
                 </Link>
               </div>
             )
