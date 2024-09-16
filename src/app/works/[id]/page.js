@@ -48,7 +48,10 @@ export default async function Work({ params }) {
           </div>
           {
             work.sold ? (
-              <div>SOLD</div>
+              <div className="flex flex-row">
+                <Image src="/sold_icon.jpg" width={22} height={16} alt="sold"/>
+                <div>SOLD</div>
+              </div>
             ) : (
               <div>
                 <div>available</div>
