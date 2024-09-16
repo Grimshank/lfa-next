@@ -6,6 +6,11 @@ import Slider from '@/components/slider/Slider';
 import NewsletterSection from '@/components/NewsletterSections';
 import InstagramFeed from '@/components/instagram/InstagramFeed';
 
+export const Metadata = {
+  title: 'LeCrone Fine Art',
+  description: 'Explore the captivating artwork of Sean LeCrone, featuring a comprehensive catalog of his paintings and artistic creations. Discover detailed information about his style, artistic journey, upcoming exhibitions, and classes.',
+}
+
 export default async function Home() {
   const works = await getWorks();
 
