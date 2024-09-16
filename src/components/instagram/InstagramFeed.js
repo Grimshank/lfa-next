@@ -2,14 +2,20 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const getInstagramFeed = async () => {
+const getLastFourInstagramPosts = async () => {
   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_TOKEN}`
 
   try {
     const data = await fetch(url);
     const feed = await data.json();
 
-    return feed.data;
+    console.log()
+
+    const lastFourInstagramPosts = feed.data.slice(0, 4);
+
+    console.log(JSON.stringify(lastFourInstagramPosts, null, 2));
+
+    return lastFourInstagramPosts;
   } catch (err) {
     console.error(`could not fetch instagram feed: ${err.message}`);
     return [];
@@ -17,9 +23,7 @@ const getInstagramFeed = async () => {
 }
 
 export default async function InstagramFeed() {
-  const instagramFeed = await getInstagramFeed();
-
-  const lastFourInstagramPosts = instagramFeed.slice(0, 4);
+  const lastFourInstagramPosts = await getLastFourInstagramPosts();
 
   return (
     <div className="w-full px-8 py-12 bg-[#FFFFFF] grid grid-cols-1 items-center justify-center">
