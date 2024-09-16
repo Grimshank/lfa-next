@@ -40,7 +40,7 @@ function NewsletterSection() {
   }
 
   return (
-    <div className="w-full px-8 py-12 bg-[#FFFFFF] grid grid-cols-1 items-center justify-center">
+    <div className="w-full px-8 py-12 bg-[#5280BB] grid grid-cols-1 items-center justify-center">
       <h1
         className="text-3xl font-medium mx-auto mb-4"
         style={{fontFamily: 'mrs-eaves-roman-small-caps'}}

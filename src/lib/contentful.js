@@ -43,7 +43,7 @@ export const getWorks = async () => {
   const results = await getEntriesByType('work');
 
   const works = results.map((work, idx) =>  {
-    console.log(JSON.stringify(work, null, 2));
+    //console.log(JSON.stringify(work, null, 2));
 
     return {
       id: work.sys.id,
