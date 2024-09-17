@@ -17,7 +17,7 @@ export default function SmallHeader() {
 
       {/* Right Text */}
       <div>
-        <h1 className="text-3xl md:text-4xl font-bold"
+        <h1 className="text-2xl md:text-4xl font-bold"
             style={{fontFamily: 'mrs-eaves-roman-small-caps'}}>LeCrone Fine Art</h1>
       </div>
     </div>
