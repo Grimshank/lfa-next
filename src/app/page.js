@@ -2,7 +2,6 @@ import { getWorks } from '@/lib/contentful';
 import AboutSection from '@/components/AboutSection';
 import ZoomingImageHero from '@/components/hero/ZoomingImageHero';
 import Footer from '@/components/Footer';
-import Slider from '@/components/slider/Slider';
 import NewsletterSection from '@/components/NewsletterSections';
 import InstagramFeed from '@/components/instagram/InstagramFeed';
 

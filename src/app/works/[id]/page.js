@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import PrevNext from '@/components/PrevNext';
+import SmallHeader from '@/components/SmallHeader';
 
 function getPrevAndNext(id, works) {
   const index = works.findIndex(cur => cur.id === id);
@@ -27,8 +28,9 @@ export default async function Work({ params }) {
 
   return (
     <div>
+      <SmallHeader />
       <div
-        className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 mt-20"
+        className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2"
       >
         <div>
           <Image src={work.src} alt={work.title} width={1024} height={1024}/>
