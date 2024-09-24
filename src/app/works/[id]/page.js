@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import PrevNext from '@/components/PrevNext';
 import SmallHeader from '@/components/SmallHeader';
+import WetPaintButton from "@/components/WetPaintButton";
 
 function getPrevAndNext(id, works) {
   const index = works.findIndex(cur => cur.id === id);
@@ -65,11 +66,9 @@ export default async function Work({ params }) {
           </div>
           {
             !work.sold ? (
-              <div className="mt-4">
+              <div className="mt-4 mb-20">
                 <Link href={`/inquire/${work.id}`}>
-                  <div className="text-center md:w-1/2 rounded text-white p-2 bg-[#ED9238]">
-                    CONTACT SEAN ABOUT THIS ARTWORK
-                  </div>
+                  <WetPaintButton text='CONTACT SEAN ABOUT THIS ARTWORK' />
                 </Link>
               </div>
             ) : null

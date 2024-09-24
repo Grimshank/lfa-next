@@ -1,6 +1,7 @@
 import React from 'react';
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import WetPaintButton from '@/components/WetPaintButton';
 
 export default function FeaturedArtSection({ work }) {
   return (
@@ -18,12 +19,8 @@ export default function FeaturedArtSection({ work }) {
         <div>
           Check out a selection of Sean&apos;s current works
         </div>
-        <Link href="/works" legacyBehavior>
-          <div
-            className="bg-[#ED9238] p-6 mt-4 rounded-xl"
-          >
-            SEAN LECRONE ART
-          </div>
+        <Link href="/works" className="mt-4">
+          <WetPaintButton text='SEAN LECRONE ART' />
         </Link>
       </div>
     </div>
