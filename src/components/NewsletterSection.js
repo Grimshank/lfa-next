@@ -33,8 +33,6 @@ function NewsletterSection() {
       return;
     }
 
-    console.log(data);
-
     setSuccessMessage(data.res);
     setErrorMessage(undefined);
   }

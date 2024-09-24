@@ -9,13 +9,7 @@ const getLastFourInstagramPosts = async () => {
     const data = await fetch(url);
     const feed = await data.json();
 
-    console.log()
-
-    const lastFourInstagramPosts = feed.data.slice(0, 4);
-
-    console.log(JSON.stringify(lastFourInstagramPosts, null, 2));
-
-    return lastFourInstagramPosts;
+    return feed.data.slice(0, 4);
   } catch (err) {
     console.error(`could not fetch instagram feed: ${err.message}`);
     return [];
