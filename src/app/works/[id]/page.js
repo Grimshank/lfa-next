@@ -22,10 +22,7 @@ function getPrevAndNext(id, works) {
 
 async function getThankYouFlag() {
   const posthog = PostHogClient();
-  console.log(`postHog: ${posthog}`);
-  const thankYou = await posthog.getFeatureFlagPayload('thankYou');
-  console.log(`thankYou: ${JSON.stringify(thankYou)}`);
-  return thankYou;
+  return await posthog.getFeatureFlagPayload('thankYou');
 }
 
 export default async function Work({ params }) {
