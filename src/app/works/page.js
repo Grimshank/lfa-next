@@ -1,8 +1,8 @@
 import React from 'react';
-import Footer from "@/components/Footer";
-import {getWorks} from "@/lib/contentful";
-import ZoomingImageHero from "@/components/hero/ZoomingImageHero";
-import MasonryGallery from "@/components/gallery/MasonryGallery";
+import Footer from '@/components/Footer';
+import {getWorks} from '@/lib/contentful';
+import ZoomingImageHero from '@/components/hero/ZoomingImageHero';
+import MasonryGallery from '@/components/gallery/MasonryGallery';
 
 export default async function Works() {
   const works = await getWorks();

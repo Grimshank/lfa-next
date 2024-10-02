@@ -5,7 +5,8 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import PrevNext from '@/components/PrevNext';
 import SmallHeader from '@/components/SmallHeader';
-import WetPaintButton from "@/components/WetPaintButton";
+import WetPaintButton from '@/components/WetPaintButton';
+import PostHogClient from "@/app/posthog";
 
 function getPrevAndNext(id, works) {
   const index = works.findIndex(cur => cur.id === id);
@@ -19,6 +20,14 @@ function getPrevAndNext(id, works) {
   };
 }
 
+async function getThankYouFlag() {
+  const posthog = PostHogClient();
+  console.log(`postHog: ${posthog}`);
+  const thankYou = await posthog.getFeatureFlagPayload('thankYou');
+  console.log(`thankYou: ${JSON.stringify(thankYou)}`);
+  return thankYou;
+}
+
 export default async function Work({ params }) {
   const { id } = params;
 
@@ -26,6 +35,8 @@ export default async function Work({ params }) {
   const works = await getWorks();
 
   const { previous, next } = getPrevAndNext(work.id, works);
+
+  const thankYou = await getThankYouFlag();
 
   return (
     <div>
@@ -61,9 +72,13 @@ export default async function Work({ params }) {
               </div>
             )
           }
-          <div className="mt-3">
-            {work.price}
-          </div>
+          {
+            thankYou && thankYou.discount && !work.sold ? (
+              <div>{`$${Number(work.price - (work.price * thankYou.discount)).toFixed(2)} - ${100 * thankYou.discount}% discount applied`}</div>
+            ) : (
+              <div>{`$${work.price}.00`}</div>
+            )
+          }
           {
             !work.sold ? (
               <div className="mt-4 mb-20">
