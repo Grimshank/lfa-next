@@ -1,8 +1,15 @@
-import {PostHog} from 'posthog-node';
+import { PostHog } from 'posthog-node';
 
 export default function PostHogClient() {
-  return new PostHog(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
+  console.log('PostHogClient()');
+  const postHogClient = new PostHog(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
     host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
     personalApiKey: process.env.POSTHOG_API_KEY,
   });
+  postHogClient.on('error', (err) => {
+    console.log('!!!!!!!!!')
+    console.error(err.response);
+    console.log('*********')
+  })
+  return postHogClient;
 }
