@@ -34,7 +34,7 @@ export const getWork = async (id) => {
     substrate: work.fields.substrate,
     framed: work.fields.framed,
     sold: work.fields.sold,
-    price: `$${work.fields.price}.00`,
+    price: work.fields.price,
     category: work.fields.category,
   };
 }
@@ -54,7 +54,7 @@ export const getWorks = async () => {
       substrate: work.fields.substrate,
       framed: work.fields.framed,
       sold: work.fields.sold,
-      price: `$${work.fields.price}.00`,
+      price: work.fields.price,
       category: work.fields.category,
     };
   });

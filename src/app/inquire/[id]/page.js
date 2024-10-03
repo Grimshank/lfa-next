@@ -10,15 +10,17 @@ export default async function Inquire({ params }) {
   const work = await getWork(id);
 
   return (
-    <div
-      className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 mt-20"
-    >
+    <div>
       <SmallHeader />
-      <div>
-        <Image src={work.src} alt={work.title} width={1024} height={1024}/>
-      </div>
-      <div className="md:ml-8">
-        <InquiryForm title={work.title} />
+      <div
+        className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 "
+      >
+        <div>
+          <Image src={work.src} alt={work.title} width={1024} height={1024}/>
+        </div>
+        <div className="md:ml-8">
+          <InquiryForm title={work.title} />
+        </div>
       </div>
     </div>
   );

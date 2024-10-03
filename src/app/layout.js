@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Nav from '@/components/nav/Nav';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { CSPostHogProvider } from '@/app/providers';
 
 import './globals.css';
 
@@ -18,12 +19,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Nav />
+    <body className={inter.className}>
+      <CSPostHogProvider>
+        <Nav/>
         {children}
-        <Analytics />
-        <SpeedInsights />
-      </body>
+        <Analytics/>
+        <SpeedInsights/>
+      </CSPostHogProvider>
+    </body>
     </html>
-  );
+)
+  ;
 }
