@@ -1,18 +1,28 @@
 "use client";
 
+import React, {useState} from 'react';
 import Link from "next/link";
 import Masonry from 'react-masonry-css';
 import { motion } from 'framer-motion';
 import { track } from '@vercel/analytics';
 import Image from 'next/image';
-import { useFeatureFlagPayload} from 'posthog-js/react'
+import { useFeatureFlagPayload } from 'posthog-js/react'
+import CategoryDropDown from '@/components/CategoryDropDown';
 
-function MasonryGallery({works}) {
+function MasonryGallery({works, categories}) {
+  const [category, setCategory] = useState('all');
+
   const thankYou = useFeatureFlagPayload('thankYou');
 
   function handleWorkClicked(work) {
     track('Work Engagement', {title: work.title});
   }
+
+  // Function to update the state
+  const updateCategory = (category) => {
+    console.log(`setting category to ${category}`)
+    setCategory(category);
+  };
 
   return (
     <div className="flex flex-col items-center">
@@ -41,13 +51,14 @@ function MasonryGallery({works}) {
           </div>
         ) : null
       }
+      <CategoryDropDown categories={categories} category={category} updateCategory={updateCategory} />
       <Masonry
         breakpointCols={{default: 3, 1100: 2, 700: 1}}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
         {
-          works.map((work, index) => (
+          works.map((work, index) => work.category === category || category === 'all' ? (
             <div key={index} className="overflow-hidden flex flex-col w-full">
               <motion.div
                 onClick={() => handleWorkClicked(work)}
@@ -79,7 +90,7 @@ function MasonryGallery({works}) {
                 }
               </div>
             </div>
-          ))
+          ) : null)
         }
       </Masonry>
     </div>
