@@ -42,7 +42,9 @@ export default async function Work({ params }) {
         className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2"
       >
         <div>
-          <Image src={work.src} alt={work.title} width={1024} height={1024}/>
+          <Link href={`/zoom/${id}`}>
+            <Image src={work.src} alt={work.title} width={1024} height={1024}/>
+          </Link>
         </div>
         <div className="md:ml-8 mt-4 md:mt-0">
           <h1
