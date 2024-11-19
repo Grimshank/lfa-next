@@ -51,21 +51,24 @@ export default function About() {
           </p>
           <ul className="mt-2">
             <li>Ultramarine Blue</li>
-            <li>Phthalo Blue</li>
-            <li>Viridian</li>
-            <li>Transparent Oxide Red</li>
+            <li>* Phthalo Blue</li>
+            <li>* Viridian</li>
+            <li>* Transparent Oxide Red</li>
             <li>Yellow Ochre</li>
             <li>Alizarin Crimson</li>
-            <li>Quinacridone Red</li>
-            <li>Cadmium Red Light</li>
+            <li>* Quinacridone Red</li>
+            <li>* Cadmium Red Light</li>
             <li>Cadmium Orange</li>
             <li>Cadmium Yellow Deep</li>
             <li>Cadmium Yellow Medium</li>
-            <li>Cadmium Yellow Light</li>
+            <li>* Cadmium Yellow Light</li>
             <li>Cadmium Yellow Lemon</li>
-            <li>Titanium White</li>
+            <li>* Titanium White</li>
           </ul>
-          <p className="mt-2">Sean uses the same palette for both oil and acrylic works.</p>
+          <p className="mt-2">
+            Sean uses the same palette for both oil and acrylic works.  He recently began using a
+            more limited palette of colors; these colors are marked with *.
+          </p>
         </motion.div>
 
         <motion.div
